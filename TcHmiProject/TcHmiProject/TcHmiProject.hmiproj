@@ -113,8 +113,14 @@
     <Folder Include="Imports" />
     <Folder Include="Imports\Images" />
     <Folder Include="Imports\Videos" />
+    <Folder Include="MongoDB-helpers\Functions" />
+    <Folder Include="MongoDB-helpers\Aggregation" />
+    <Folder Include="MongoDB-helpers\Server" />
+    <Folder Include="MongoDB-helpers\Subscriptions" />
     <Folder Include="KeyboardLayouts\" />
     <Folder Include="Localization" />
+    <Folder Include="MongoDB-helpers" />
+    <Folder Include="JS" />
     <Folder Include="Pages\" />
     <Folder Include="Server\ADS\" />
     <Folder Include="Server\MongoDBCoreService" />
@@ -136,6 +142,92 @@
     <Content Include=".eslintrc.json">
       <Visible>false</Visible>
     </Content>
+    <Content Include="JS\CarModelYearFilter.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="MongoDB-helpers\Aggregation\CarBrandAggregationData.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>MongoDB-helpers\Aggregation\CarBrandAggregationData.js</DependentUpon>
+    </Content>
+    <Content Include="MongoDB-helpers\Aggregation\CarBrandAggregationData.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="MongoDB-helpers\Aggregation\GetAggregationResult.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>MongoDB-helpers\Aggregation\GetAggregationResult.js</DependentUpon>
+    </Content>
+    <Content Include="MongoDB-helpers\Aggregation\GetAggregationResult.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="MongoDB-helpers\Functions\CreateCollection.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>MongoDB-helpers\Functions\CreateCollection.js</DependentUpon>
+    </Content>
+    <Content Include="MongoDB-helpers\Functions\CreateCollection.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="MongoDB-helpers\Functions\CreateDocument.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>MongoDB-helpers\Functions\CreateDocument.js</DependentUpon>
+    </Content>
+    <Content Include="MongoDB-helpers\Functions\CreateDocument.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="MongoDB-helpers\Functions\RemoveDocument.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>MongoDB-helpers\Functions\RemoveDocument.js</DependentUpon>
+    </Content>
+    <Content Include="MongoDB-helpers\Functions\RemoveDocument.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="MongoDB-helpers\Functions\SetAggregationPipeline.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>MongoDB-helpers\Functions\SetAggregationPipeline.js</DependentUpon>
+    </Content>
+    <Content Include="MongoDB-helpers\Functions\SetAggregationPipeline.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="MongoDB-helpers\Functions\UpdateDocument.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>MongoDB-helpers\Functions\UpdateDocument.js</DependentUpon>
+    </Content>
+    <Content Include="MongoDB-helpers\Functions\UpdateDocument.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="MongoDB-helpers\Server\CallServerFunction.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>MongoDB-helpers\Server\CallServerFunction.js</DependentUpon>
+    </Content>
+    <Content Include="MongoDB-helpers\Server\CallServerFunction.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="MongoDB-helpers\Server\CallServerFunctionPromise.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>MongoDB-helpers\Server\CallServerFunctionPromise.js</DependentUpon>
+    </Content>
+    <Content Include="MongoDB-helpers\Server\CallServerFunctionPromise.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="MongoDB-helpers\Server\CallServerFunctionPromiseJson.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>MongoDB-helpers\Server\CallServerFunctionPromiseJson.js</DependentUpon>
+    </Content>
+    <Content Include="MongoDB-helpers\Server\CallServerFunctionPromiseJson.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="MongoDB-helpers\Server\HandleErrorCodes.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>MongoDB-helpers\Server\HandleErrorCodes.js</DependentUpon>
+    </Content>
+    <Content Include="MongoDB-helpers\Server\HandleErrorCodes.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="MongoDB-helpers\Subscriptions\SubscribeCollections.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Pages\Data.content">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Pages\Events.content">
       <SubType>Content</SubType>
     </Content>
@@ -149,6 +241,15 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Server\ADS\ADS.Storage.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\MongoDBCoreService\MongoDBCoreService.Config.default.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\MongoDBCoreService\MongoDBCoreService.Config.remote.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\MongoDBCoreService\MongoDBCoreService.Storage.json">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Server\TcHmiLua\TcHmiLua.Config.default.json">

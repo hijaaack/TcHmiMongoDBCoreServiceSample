@@ -1,4 +1,4 @@
 {
     "ConnectionString": "mongodb://localhost:27017",
-    "DatabaseName": "TF2000"
+    "DatabaseName": "test"
 }

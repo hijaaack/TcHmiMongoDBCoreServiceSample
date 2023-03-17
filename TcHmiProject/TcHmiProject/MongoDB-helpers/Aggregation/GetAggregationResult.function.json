@@ -1,0 +1,81 @@
+﻿{
+    "function": {
+        "name": "GetAggregationResult",
+        "namespace": "TcHmi.Functions.TcHmiProject",
+        "displayName": "GetAggregationResult",
+        "description": "",
+        "waitMode": "Asynchronous",
+        "category": "",
+        "returnValue": {
+            "type": "tchmi:general#/definitions/String"
+        },
+        "visible": true,
+        "injectContextObject": true,
+        "arguments": [
+            {
+                "name": "ctx",
+                "displayName": "ctx",
+                "type": "tchmi:framework#/definitions/ContextReference",
+                "description": "Context Reference",
+                "defaultValue": null,
+                "required": true,
+                "bindable": false,
+                "restParameter": false,
+                "asReference": false,
+                "allowControlAttributeBindingOptions": false
+            },
+            {
+                "name": "Collection",
+                "displayName": "Collection",
+                "type": "tchmi:general#/definitions/String",
+                "description": "",
+                "defaultValue": "",
+                "required": true,
+                "bindable": true,
+                "restParameter": false,
+                "asReference": false,
+                "allowControlAttributeBindingOptions": false
+            },
+            {
+                "name": "Data",
+                "displayName": "Data",
+                "type": "tchmi:general#/definitions/String",
+                "description": "",
+                "defaultValue": "",
+                "required": true,
+                "bindable": true,
+                "restParameter": false,
+                "asReference": false,
+                "allowControlAttributeBindingOptions": false
+            },
+            {
+                "name": "Result",
+                "displayName": "Result",
+                "type": "tchmi:project#/definitions/Symbol_Of_Array",
+                "description": "",
+                "defaultValue": "",
+                "required": true,
+                "bindable": true,
+                "restParameter": false,
+                "asReference": true,
+                "allowControlAttributeBindingOptions": false
+            }
+        ]
+    },
+  "$schema": "./../../../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.758.8/runtimes/native1.12-tchmi/Schema/FunctionDescription.Schema.json",
+  "apiVersion": 1,
+  "version": {
+    "full": "0.0.0.0",
+    "major": 0,
+    "minor": 0,
+    "revision": 0,
+    "build": 0
+  },
+  "dependencyFiles": [
+    {
+      "name": "GetAggregationResult.js",
+      "type": "JavaScript",
+      "description": ""
+    }
+  ]
+}

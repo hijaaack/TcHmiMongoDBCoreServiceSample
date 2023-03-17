@@ -1,7 +1,7 @@
 ﻿{
   "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.758.8/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
   "basePath": "./framework",
-  "scaleMode": "None",
+  "scaleMode": "ScaleToFit",
   "startupView": "Desktop.view",
   "loginPage": "/Pages/LoginPage.html",
   "tcHmiServer": {
@@ -48,12 +48,77 @@
       "name": "Fonts/Fonts.css",
       "description": "",
       "type": "Stylesheet"
+    },
+    {
+      "name": "MongoDB-helpers/Subscriptions/SubscribeCollections.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "JS/CarModelYearFilter.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "MongoDB-helpers/Aggregation/GetAggregationResult.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "MongoDB-helpers/Functions/CreateCollection.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "MongoDB-helpers/Functions/CreateDocument.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "MongoDB-helpers/Functions/RemoveDocument.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "MongoDB-helpers/Functions/SetAggregationPipeline.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "MongoDB-helpers/Functions/UpdateDocument.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "MongoDB-helpers/Server/CallServerFunction.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "MongoDB-helpers/Server/CallServerFunctionPromise.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "MongoDB-helpers/Server/CallServerFunctionPromiseJson.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "MongoDB-helpers/Server/HandleErrorCodes.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "MongoDB-helpers/Aggregation/CarBrandAggregationData.js",
+      "description": "",
+      "type": "JavaScript"
     }
   ],
   "userControls": [],
   "content": [
     {
-      "url": "Pages/StartPage.content",
+      "url": "Pages/Data.content",
       "preload": false,
       "keepAlive": false,
       "loadSync": false,
@@ -61,6 +126,13 @@
     },
     {
       "url": "Pages/Events.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Pages/StartPage.content",
       "preload": false,
       "keepAlive": false,
       "loadSync": false,
@@ -75,9 +147,69 @@
       "preloadBindings": false
     }
   ],
-  "userFunctions": [],
+  "userFunctions": [
+    {
+      "url": "MongoDB-helpers/Aggregation/CarBrandAggregationData.js"
+    },
+    {
+      "url": "MongoDB-helpers/Aggregation/GetAggregationResult.js"
+    },
+    {
+      "url": "MongoDB-helpers/Functions/CreateCollection.js"
+    },
+    {
+      "url": "MongoDB-helpers/Functions/CreateDocument.js"
+    },
+    {
+      "url": "MongoDB-helpers/Functions/RemoveDocument.js"
+    },
+    {
+      "url": "MongoDB-helpers/Functions/SetAggregationPipeline.js"
+    },
+    {
+      "url": "MongoDB-helpers/Functions/UpdateDocument.js"
+    },
+    {
+      "url": "MongoDB-helpers/Server/CallServerFunction.js"
+    },
+    {
+      "url": "MongoDB-helpers/Server/CallServerFunctionPromise.js"
+    },
+    {
+      "url": "MongoDB-helpers/Server/CallServerFunctionPromiseJson.js"
+    },
+    {
+      "url": "MongoDB-helpers/Server/HandleErrorCodes.js"
+    }
+  ],
   "symbols": {
-    "internal": {},
+    "internal": {
+      "carDataList": {
+        "type": "tchmi:general#/definitions/Array",
+        "persist": false,
+        "readonly": false
+      },
+      "carDatagridFilter": {
+        "type": "tchmi:general#/definitions/Object",
+        "persist": false,
+        "readonly": false
+      },
+      "aggregationResultList": {
+        "type": "tchmi:general#/definitions/Array",
+        "persist": false,
+        "readonly": false
+      },
+      "carBrandList": {
+        "type": "tchmi:general#/definitions/Array",
+        "persist": false,
+        "readonly": false
+      },
+      "selectedCarBrand": {
+        "type": "tchmi:general#/definitions/String",
+        "persist": false,
+        "readonly": false
+      }
+    },
     "themedResources": {
       "TR_Icon_StartPage_normal": {
         "type": "tchmi:framework#/definitions/Path",

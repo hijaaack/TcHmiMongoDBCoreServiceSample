@@ -1,0 +1,467 @@
+﻿<div id="Data" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="1920" data-tchmi-height="920" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
+
+<div id="TcHmiDatagrid" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiDatagrid" data-tchmi-height="649" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="261" data-tchmi-top-unit="px" data-tchmi-width="465" data-tchmi-width-unit="px" data-tchmi-src-data="%i%carDataList%/i%" data-tchmi-filter="%i%carDatagridFilter%/i%">
+<script data-tchmi-target-attribute="data-tchmi-src-column" type="application/json">
+[
+  {
+    "name": "carBrand",
+    "label": "Brand",
+    "control": "TextBlock",
+    "width": 200,
+    "widthUnit": "px",
+    "resize": true,
+    "sortable": true,
+    "minWidth": 200,
+    "minWidthUnit": "px",
+    "cellBackground": null,
+    "textColor": null,
+    "editable": false,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "headerHorizontalAlignment": "Center",
+    "headerVerticalAlignment": "Center",
+    "ignoreEscapeSequences": false
+  },
+  {
+    "name": "carModelYear",
+    "label": "Model Year",
+    "control": "TextBlock",
+    "width": 100,
+    "widthUnit": "px",
+    "resize": true,
+    "sortable": true,
+    "minWidth": 100,
+    "minWidthUnit": "px",
+    "cellBackground": null,
+    "textColor": null,
+    "editable": false,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "headerHorizontalAlignment": "Center",
+    "headerVerticalAlignment": "Center",
+    "ignoreEscapeSequences": false
+  },
+  {
+    "name": "carPaintColor",
+    "label": "Color",
+    "control": "TextBlock",
+    "width": 150,
+    "widthUnit": "px",
+    "resize": true,
+    "sortable": true,
+    "minWidth": 150,
+    "minWidthUnit": "px",
+    "cellBackground": null,
+    "textColor": null,
+    "editable": false,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "headerHorizontalAlignment": "Center",
+    "headerVerticalAlignment": "Center",
+    "ignoreEscapeSequences": false
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-cell-content-padding" type="application/json">
+{
+  "left": 3,
+  "leftUnit": "px",
+  "right": 3,
+  "rightUnit": "px",
+  "top": 0,
+  "topUnit": "px",
+  "bottom": 0,
+  "bottomUnit": "px"
+}
+</script>
+
+</div>
+<div id="TcHmiTextbox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="" data-tchmi-top="230" data-tchmi-top-unit="px" data-tchmi-width="232" data-tchmi-width-unit="px" data-tchmi-placeholder="Filter by model year...">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+<div id="TcHmiTextblock" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="Server CollectionList Subscription Sample" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="465" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="26">
+
+<script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+{
+  "left": "None",
+  "right": "None",
+  "top": "None",
+  "bottom": "Solid"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+{
+  "left": 0,
+  "right": 0,
+  "top": 0,
+  "bottom": 2,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+<div id="TcHmiDatagrid_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiDatagrid" data-tchmi-height="649" data-tchmi-height-unit="px" data-tchmi-left="512" data-tchmi-left-unit="px" data-tchmi-top="261" data-tchmi-top-unit="px" data-tchmi-width="465" data-tchmi-width-unit="px" data-tchmi-src-data="%s%MongoDBCoreService.AggregationOutputList1%/s%">
+<script data-tchmi-target-attribute="data-tchmi-src-column" type="application/json">
+[
+  {
+    "name": "carBrand",
+    "label": "Brand",
+    "control": "TextBlock",
+    "width": 200,
+    "widthUnit": "px",
+    "resize": true,
+    "sortable": true,
+    "minWidth": 200,
+    "minWidthUnit": "px",
+    "cellBackground": null,
+    "textColor": null,
+    "editable": false,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "headerHorizontalAlignment": "Center",
+    "headerVerticalAlignment": "Center",
+    "ignoreEscapeSequences": false
+  },
+  {
+    "name": "carModelYear",
+    "label": "Model Year",
+    "control": "TextBlock",
+    "width": 100,
+    "widthUnit": "px",
+    "resize": true,
+    "sortable": true,
+    "minWidth": 100,
+    "minWidthUnit": "px",
+    "cellBackground": null,
+    "textColor": null,
+    "editable": false,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "headerHorizontalAlignment": "Center",
+    "headerVerticalAlignment": "Center",
+    "ignoreEscapeSequences": false
+  },
+  {
+    "name": "carPaintColor",
+    "label": "Color",
+    "control": "TextBlock",
+    "width": 150,
+    "widthUnit": "px",
+    "resize": true,
+    "sortable": true,
+    "minWidth": 150,
+    "minWidthUnit": "px",
+    "cellBackground": null,
+    "textColor": null,
+    "editable": false,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "headerHorizontalAlignment": "Center",
+    "headerVerticalAlignment": "Center",
+    "ignoreEscapeSequences": false
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-cell-content-padding" type="application/json">
+{
+  "left": 3,
+  "leftUnit": "px",
+  "right": 3,
+  "rightUnit": "px",
+  "top": 0,
+  "topUnit": "px",
+  "bottom": 0,
+  "bottomUnit": "px"
+}
+</script>
+
+</div>
+<div id="TcHmiTextblock_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="512" data-tchmi-left-unit="px" data-tchmi-text="Aggregation Pipeline Sample" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="465" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="26">
+
+<script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+{
+  "left": "None",
+  "right": "None",
+  "top": "None",
+  "bottom": "Solid"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+{
+  "left": 0,
+  "right": 0,
+  "top": 0,
+  "bottom": 2,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+<div id="TcHmiButton" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="512" data-tchmi-left-unit="px" data-tchmi-text="Set Pipeline Sample1" data-tchmi-top="127" data-tchmi-top-unit="px" data-tchmi-width="137" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "TcHmiButton.onPressed",
+    "actions": [
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "TcHmi.Functions.TcHmiProject.SetAggregationPipeline",
+        "fnParams": [
+          {
+            "objectType": "StaticValue",
+            "valueType": "tchmi:general#/definitions/String",
+            "value": "carData"
+          },
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:general#/definitions/String",
+            "symbolExpression": "%f%`[\r  {\r    '$match': {\r      'carModelYear': {\r        '$gt': 1989, \r        '$lt': 2001\r      }\r    }\r  }, {\r    '$sort': {\r      'carModelYear': -1\r    }\r  }\r]`%/f%"
+          },
+          {
+            "objectType": "StaticValue",
+            "valueType": "tchmi:general#/definitions/Number",
+            "value": 1.0
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="TcHmiButton_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="512" data-tchmi-left-unit="px" data-tchmi-text="Set Pipeline Sample2" data-tchmi-top="199" data-tchmi-top-unit="px" data-tchmi-width="137" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "TcHmiButton_1.onPressed",
+    "actions": [
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "TcHmi.Functions.TcHmiProject.SetAggregationPipeline",
+        "fnParams": [
+          {
+            "objectType": "StaticValue",
+            "valueType": "tchmi:general#/definitions/String",
+            "value": "carData"
+          },
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:general#/definitions/String",
+            "symbolExpression": "%f%`[\r  {\r    '$match': {\r      'carModelYear': {\r        '$gt': 2010\r      }, \r      'carBrand': 'BMW'\r    }\r  }, {\r    '$sort': {\r      'carModelYear': -1\r    }\r  }\r]`%/f%"
+          },
+          {
+            "objectType": "StaticValue",
+            "valueType": "tchmi:general#/definitions/Number",
+            "value": 1.0
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="TcHmiTextblock_2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="512" data-tchmi-left-unit="px" data-tchmi-text="Sample1: Return all cars with modelyear 1990-2000 by descending" data-tchmi-top="163" data-tchmi-top-unit="px" data-tchmi-width="465" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="14">
+</div>
+<div id="TcHmiTextblock_3" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="512" data-tchmi-left-unit="px" data-tchmi-text="Sample2: Return all BMW cars with model year 2010> in descending order" data-tchmi-top="230" data-tchmi-top-unit="px" data-tchmi-width="465" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="14">
+</div>
+<div id="TcHmiTextblock_4" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="155" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="The MongoDBCoreService Extension has an symbol that contains all the Collections that exists in the database. In this sample that is being used in the codebehind SubscribeCollections.js we can read out the specified collection (in this case &quot;carData&quot;) and then write it to an Internal Symbol that has then been linked to the Datagrid below. " data-tchmi-top="55" data-tchmi-top-unit="px" data-tchmi-width="465" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="14">
+</div>
+<div id="TcHmiDatagrid_2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiDatagrid" data-tchmi-height="649" data-tchmi-height-unit="px" data-tchmi-left="1015" data-tchmi-left-unit="px" data-tchmi-top="261" data-tchmi-top-unit="px" data-tchmi-width="465" data-tchmi-width-unit="px" data-tchmi-src-data="%i%aggregationResultList%/i%">
+<script data-tchmi-target-attribute="data-tchmi-src-column" type="application/json">
+[
+  {
+    "name": "carBrand",
+    "label": "Brand",
+    "control": "TextBlock",
+    "width": 200,
+    "widthUnit": "px",
+    "resize": true,
+    "sortable": true,
+    "minWidth": 200,
+    "minWidthUnit": "px",
+    "cellBackground": null,
+    "textColor": null,
+    "editable": false,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "headerHorizontalAlignment": "Center",
+    "headerVerticalAlignment": "Center",
+    "ignoreEscapeSequences": false
+  },
+  {
+    "name": "carModelYear",
+    "label": "Model Year",
+    "control": "TextBlock",
+    "width": 100,
+    "widthUnit": "px",
+    "resize": true,
+    "sortable": true,
+    "minWidth": 100,
+    "minWidthUnit": "px",
+    "cellBackground": null,
+    "textColor": null,
+    "editable": false,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "headerHorizontalAlignment": "Center",
+    "headerVerticalAlignment": "Center",
+    "ignoreEscapeSequences": false
+  },
+  {
+    "name": "carPaintColor",
+    "label": "Color",
+    "control": "TextBlock",
+    "width": 150,
+    "widthUnit": "px",
+    "resize": true,
+    "sortable": true,
+    "minWidth": 150,
+    "minWidthUnit": "px",
+    "cellBackground": null,
+    "textColor": null,
+    "editable": false,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "headerHorizontalAlignment": "Center",
+    "headerVerticalAlignment": "Center",
+    "ignoreEscapeSequences": false
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-cell-content-padding" type="application/json">
+{
+  "left": 3,
+  "leftUnit": "px",
+  "right": 3,
+  "rightUnit": "px",
+  "top": 0,
+  "topUnit": "px",
+  "bottom": 0,
+  "bottomUnit": "px"
+}
+</script>
+
+</div>
+<div id="TcHmiTextblock_5" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="1015" data-tchmi-left-unit="px" data-tchmi-text="Get Aggregation Result Sample" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="465" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="26">
+<script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+{
+  "left": "None",
+  "right": "None",
+  "top": "None",
+  "bottom": "Solid"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+{
+  "left": 0,
+  "right": 0,
+  "top": 0,
+  "bottom": 2,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+<div id="TcHmiTextblock_6" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="57" data-tchmi-height-unit="px" data-tchmi-left="512" data-tchmi-left-unit="px" data-tchmi-text="The extension has 3 server symbols pre-defined, AggregationOutputList1-3. By setting a aggregation pipeline to the extension we can get specific data back from the extension in one of these server variables. " data-tchmi-top="55" data-tchmi-top-unit="px" data-tchmi-width="465" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="14">
+</div>
+<div id="TcHmiCombobox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiCombobox" data-tchmi-combobox-text="Select Car Brand" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="1015" data-tchmi-left-unit="px" data-tchmi-top="230" data-tchmi-top-unit="px" data-tchmi-width="264" data-tchmi-width-unit="px" data-tchmi-src-data="%i%carBrandList[0]::items%/i%" data-tchmi-text="%i%selectedCarBrand|BindingMode=TwoWay%/i%" data-tchmi-allow-text-input="true" data-tchmi-drop-down-vertical-alignment="Center" data-tchmi-drop-down-category-vertical-alignment="Center" data-tchmi-max-list-height="300">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "TcHmiCombobox.onSelectionChanged",
+    "actions": [
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "TcHmi.Functions.TcHmiProject.GetAggregationResult",
+        "fnParams": [
+          {
+            "objectType": "StaticValue",
+            "valueType": "tchmi:general#/definitions/String",
+            "value": "carData"
+          },
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:general#/definitions/String",
+            "symbolExpression": "%f%TcHmi.Functions.TcHmiProject.CarBrandAggregationData(%i%selectedCarBrand%/i%)%/f%"
+          },
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:project#/definitions/Symbol_Of_Array",
+            "symbolExpression": "%i%aggregationResultList%/i%"
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiCombobox.onAttached",
+    "actions": [
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "TcHmi.Functions.TcHmiProject.GetAggregationResult",
+        "fnParams": [
+          {
+            "objectType": "StaticValue",
+            "valueType": "tchmi:general#/definitions/String",
+            "value": "carData"
+          },
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:general#/definitions/String",
+            "symbolExpression": "%f%`[\r  {\r    '$project': {\r      'a': '$carBrand'\r    }\r  }, {\r    '$unwind': '$a'\r  }, {\r    '$group': {\r      '_id': null, \r      'items': {\r        '$addToSet': '$a'\r      }\r    }\r  }, {\r    '$project': {\r      '_id': 0\r    }\r  }\r]`%/f%"
+          },
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:project#/definitions/Symbol_Of_Array",
+            "symbolExpression": "%i%carBrandList%/i%"
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="TcHmiTextblock_7" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="170" data-tchmi-height-unit="px" data-tchmi-left="1015" data-tchmi-left-unit="px" data-tchmi-text="With the GetAggregationResult method in the extension you can send a custom pipeline and then get the result back in the call. \n\nIn the sample below I call the method in the combobox and sends a pipeline that asks for all the unique car brands in the collection, when that data return I populate the combobox. \n\nWhen you select the car brand in the combobox a new method call is being triggered with a pipeline that asks for all the cars in the list with that specific brand. " data-tchmi-top="55" data-tchmi-top-unit="px" data-tchmi-width="465" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="14">
+</div>
+</div>
