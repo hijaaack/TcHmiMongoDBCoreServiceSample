@@ -28,9 +28,11 @@ License: [TF2200](https://www.beckhoff.com/sv-se/products/automation/twincat/tfx
 ## Get Started
 This sample is used with the MongoDB Community Server (tested with v6.0.5)
 
+
 Download: https://www.mongodb.com/try/download/community
 
 To mimic the sample, open MongoDB Compass and connect to your MongoDB. Once connected create a new database with the name "**test**" and then add a new collection named "**carData**". 
+
 ![enter image description here](https://user-images.githubusercontent.com/75740551/234288697-71653c09-dc29-434c-ad35-d48ecaa1ad3b.png)
 
 Once the "**carData**" is created select it and import JSON file and add the dummy data that is included in the project "**carDataOutput.json**"
@@ -38,6 +40,7 @@ Once the "**carData**" is created select it and import JSON file and add the dum
 ![enter image description here](https://user-images.githubusercontent.com/75740551/234289384-17a3f386-ef92-4c2d-9683-6cadaf6978f8.png)
 
 When you open the sample project make sure the MongoDBCoreService has the correct configuration. 
+
 ![enter image description here](https://user-images.githubusercontent.com/75740551/234289075-7b52f98d-f4b3-47f9-8a5c-c4fd5a094ab3.png)
 
 ## Screenshots
