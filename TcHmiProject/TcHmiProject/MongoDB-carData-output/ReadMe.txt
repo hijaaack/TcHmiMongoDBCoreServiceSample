@@ -1,0 +1,1 @@
+﻿Import the carDataOutput.json file to your MongoDB to use this sample. 
