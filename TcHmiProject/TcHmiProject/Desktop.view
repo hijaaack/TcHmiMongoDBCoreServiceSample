@@ -10,11 +10,15 @@
 [
   {
     "name": "Sample 1",
-    "content": "Pages/Data.content"
+    "content": "Pages/Data.content",
+    "icon_a": "Images/database-active.svg",
+    "icon_n": "Images/database-normal.svg"
   },
   {
     "name": "Sample 2",
-    "content": "Pages/Data2.content"
+    "content": "Pages/Data2.content",
+    "icon_a": "Images/database-active.svg",
+    "icon_n": "Images/database-normal.svg"
   },
   {
     "name": "%l%L_Events%/l%",
