@@ -113,12 +113,34 @@
       "name": "MongoDB-helpers/Aggregation/CarBrandAggregationData.js",
       "description": "",
       "type": "JavaScript"
+    },
+    {
+      "name": "JS/AddNewDocument.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "JS/RemoveSelectedDocument.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "JS/UpdateDummyDocument.js",
+      "description": "",
+      "type": "JavaScript"
     }
   ],
   "userControls": [],
   "content": [
     {
       "url": "Pages/Data.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Pages/Data2.content",
       "preload": false,
       "keepAlive": false,
       "loadSync": false,
@@ -148,6 +170,15 @@
     }
   ],
   "userFunctions": [
+    {
+      "url": "JS/AddNewDocument.js"
+    },
+    {
+      "url": "JS/RemoveSelectedDocument.js"
+    },
+    {
+      "url": "JS/UpdateDummyDocument.js"
+    },
     {
       "url": "MongoDB-helpers/Aggregation/CarBrandAggregationData.js"
     },
@@ -206,6 +237,16 @@
       },
       "selectedCarBrand": {
         "type": "tchmi:general#/definitions/String",
+        "persist": false,
+        "readonly": false
+      },
+      "newCollectionList": {
+        "type": "tchmi:general#/definitions/Array",
+        "persist": false,
+        "readonly": false
+      },
+      "newCollectionSelectedRowObject": {
+        "type": "tchmi:general#/definitions/Object",
         "persist": false,
         "readonly": false
       }

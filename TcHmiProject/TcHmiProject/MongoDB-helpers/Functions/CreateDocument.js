@@ -12,7 +12,7 @@
                     "collection": collectionName,
                     "data": jsonData
                 };
-
+                console.log(jsonObj);
                 var sendFunction = TcHmi.Functions.getFunction('CallServerFunction');
 
                 if (sendFunction) {

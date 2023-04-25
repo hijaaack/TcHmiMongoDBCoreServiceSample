@@ -464,4 +464,6 @@
 </div>
 <div id="TcHmiTextblock_7" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="170" data-tchmi-height-unit="px" data-tchmi-left="1015" data-tchmi-left-unit="px" data-tchmi-text="With the GetAggregationResult method in the extension you can send a custom pipeline and then get the result back in the call. \n\nIn the sample below I call the method in the combobox and sends a pipeline that asks for all the unique car brands in the collection, when that data return I populate the combobox. \n\nWhen you select the car brand in the combobox a new method call is being triggered with a pipeline that asks for all the cars in the list with that specific brand. " data-tchmi-top="55" data-tchmi-top-unit="px" data-tchmi-width="465" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="14">
 </div>
+<div id="TcHmiTextblock_8" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="252" data-tchmi-left-unit="px" data-tchmi-text="<-- Uses the CarModelYearFilter.js" data-tchmi-top="230" data-tchmi-top-unit="px" data-tchmi-width="223" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left">
+</div>
 </div>

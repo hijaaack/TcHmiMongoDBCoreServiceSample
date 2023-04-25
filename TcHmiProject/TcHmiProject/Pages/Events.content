@@ -1,6 +1,6 @@
 ﻿<div id="Events" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-height="100" data-tchmi-height-unit="%">
 
-  <div id="TcHmiTextblock_Events_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="48" data-tchmi-height-unit="px" data-tchmi-left="32" data-tchmi-left-unit="px" data-tchmi-text="%l%L_Events%/l%" data-tchmi-top="16" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-right="0">
+  <div id="TcHmiTextblock_Events_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="48" data-tchmi-height-unit="px" data-tchmi-left="32" data-tchmi-left-unit="px" data-tchmi-top="16" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-right="0" data-tchmi-text="Events - The MongoDBCoreService will send events to the EventGrid if you have the filter added for the domain. ">
     <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
       [
       "headline-2"
@@ -71,4 +71,6 @@
       </script>
     </div>
   </div>
+<div id="TcHmiButton_6" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="48" data-tchmi-height-unit="px" data-tchmi-left="1007" data-tchmi-left-unit="px" data-tchmi-text="Clear Events" data-tchmi-top="16" data-tchmi-top-unit="px" data-tchmi-width="169" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
+</div>
 </div>

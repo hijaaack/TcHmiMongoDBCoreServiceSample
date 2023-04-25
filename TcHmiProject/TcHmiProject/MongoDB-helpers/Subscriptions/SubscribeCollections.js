@@ -30,7 +30,10 @@
 
             var carObject = json.find(o => o['carData']);
             TcHmi.Symbol.writeEx("%i%carDataList%/i%", carObject.carData);
-        
+
+            var dummyObject = json.find(o => o['newCollection']);
+            TcHmi.Symbol.writeEx("%i%newCollectionList%/i%", dummyObject.newCollection);
+            console.log(dummyObject);
         });
     });
 })(TcHmi);

@@ -8,8 +8,6 @@
         (function (TcHmiProject) {
             async function GetAggregationResult(ctx, Collection, Data, Result) {
 
-                //console.log(">>>GetAggregationResult (async)");
-
                 var jsonObj = {
                     "collection": Collection,
                     "data": Data,

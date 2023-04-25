@@ -9,15 +9,12 @@
 </script><script data-tchmi-target-attribute="data-tchmi-navigation-structure" type="application/json">
 [
   {
-    "name": "%l%L_StartPage%/l%",
-    "content": "Pages/StartPage.content",
-    "icon_a": "%tr%TR_Icon_StartPage_active%/tr%",
-    "icon_n": "%tr%TR_Icon_StartPage_normal%/tr%",
-    "icon_p": "%tr%TR_Icon_StartPage_pressed%/tr%"
+    "name": "Sample 1",
+    "content": "Pages/Data.content"
   },
   {
-    "name": "Data",
-    "content": "Pages/Data.content"
+    "name": "Sample 2",
+    "content": "Pages/Data2.content"
   },
   {
     "name": "%l%L_Events%/l%",

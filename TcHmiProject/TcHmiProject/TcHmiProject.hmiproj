@@ -142,7 +142,28 @@
     <Content Include=".eslintrc.json">
       <Visible>false</Visible>
     </Content>
+    <Content Include="JS\AddNewDocument.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>JS\AddNewDocument.js</DependentUpon>
+    </Content>
+    <Content Include="JS\AddNewDocument.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="JS\CarModelYearFilter.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="JS\RemoveSelectedDocument.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>JS\RemoveSelectedDocument.js</DependentUpon>
+    </Content>
+    <Content Include="JS\RemoveSelectedDocument.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="JS\UpdateDummyDocument.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>JS\UpdateDummyDocument.js</DependentUpon>
+    </Content>
+    <Content Include="JS\UpdateDummyDocument.js">
       <SubType>Content</SubType>
     </Content>
     <Content Include="MongoDB-helpers\Aggregation\CarBrandAggregationData.function.json">
@@ -226,6 +247,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Pages\Data.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Pages\Data2.content">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Pages\Events.content">
