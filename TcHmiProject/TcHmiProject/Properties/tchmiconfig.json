@@ -1,14 +1,19 @@
-﻿{
-  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.758.8/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
-  "basePath": "./framework",
+{
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.4.5/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
+  "basePath": "./Beckhoff.TwinCAT.HMI.Framework",
   "scaleMode": "ScaleToFit",
   "startupView": "Desktop.view",
   "loginPage": "/Pages/LoginPage.html",
+  "splash": {
+    "versionSource": "Framework"
+  },
+  "projectVersion": "1.0.0.0",
   "tcHmiServer": {
     "websocketIntervalTime": 500,
     "websocketTimeout": 20000,
     "websocketSystemTimeout": 60000,
-    "websocketSubscriptionMode": "Change"
+    "websocketSubscriptionMode": null,
+    "disableOptionalSystemSubscriptions": false
   },
   "activeTheme": "Base",
   "themes": {
@@ -25,7 +30,8 @@
           "type": "ThemedValues"
         }
       ],
-      "replacesThemeForControls": []
+      "replacesThemeForControls": [],
+      "replacesThemeForPackageComponents": []
     },
     "Base": {
       "resources": [
@@ -40,7 +46,8 @@
           "type": "Stylesheet"
         }
       ],
-      "replacesThemeForControls": []
+      "replacesThemeForControls": [],
+      "replacesThemeForPackageComponents": []
     }
   },
   "dependencyFiles": [
@@ -90,26 +97,6 @@
       "type": "JavaScript"
     },
     {
-      "name": "MongoDB-helpers/Server/CallServerFunction.js",
-      "description": "",
-      "type": "JavaScript"
-    },
-    {
-      "name": "MongoDB-helpers/Server/CallServerFunctionPromise.js",
-      "description": "",
-      "type": "JavaScript"
-    },
-    {
-      "name": "MongoDB-helpers/Server/CallServerFunctionPromiseJson.js",
-      "description": "",
-      "type": "JavaScript"
-    },
-    {
-      "name": "MongoDB-helpers/Server/HandleErrorCodes.js",
-      "description": "",
-      "type": "JavaScript"
-    },
-    {
       "name": "MongoDB-helpers/Aggregation/CarBrandAggregationData.js",
       "description": "",
       "type": "JavaScript"
@@ -133,9 +120,40 @@
       "name": "JS/ClearSqliteLogger.js",
       "description": "",
       "type": "JavaScript"
+    },
+    {
+      "name": "JS/UpdateDummyDocuments.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "MongoDB-helpers/Functions/UpdateDocuments.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "MongoDB-helpers/Server/CallServerFunction.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "MongoDB-helpers/Server/CallServerFunctionPromise.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "MongoDB-helpers/Server/CallServerFunctionPromiseJson.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "MongoDB-helpers/Server/HandleErrorCodes.js",
+      "description": "",
+      "type": "JavaScript"
     }
   ],
   "userControls": [],
+  "controls": [],
   "content": [
     {
       "url": "Pages/Data.content",
@@ -153,13 +171,6 @@
     },
     {
       "url": "Pages/Events.content",
-      "preload": false,
-      "keepAlive": false,
-      "loadSync": false,
-      "preloadBindings": false
-    },
-    {
-      "url": "Pages/StartPage.content",
       "preload": false,
       "keepAlive": false,
       "loadSync": false,
@@ -188,6 +199,9 @@
       "url": "JS/UpdateDummyDocument.js"
     },
     {
+      "url": "JS/UpdateDummyDocuments.js"
+    },
+    {
       "url": "MongoDB-helpers/Aggregation/CarBrandAggregationData.js"
     },
     {
@@ -207,6 +221,9 @@
     },
     {
       "url": "MongoDB-helpers/Functions/UpdateDocument.js"
+    },
+    {
+      "url": "MongoDB-helpers/Functions/UpdateDocuments.js"
     },
     {
       "url": "MongoDB-helpers/Server/CallServerFunction.js"
@@ -254,7 +271,12 @@
         "readonly": false
       },
       "newCollectionSelectedRowObject": {
-        "type": "tchmi:general#/definitions/Object",
+        "value": {
+          "_id": "",
+          "comment": "",
+          "randomNumber": "NaN"
+        },
+        "type": "tchmi:project#/definitions/DummyData",
         "persist": false,
         "readonly": false
       }
@@ -308,8 +330,11 @@
           "Base-Dark": "Themes/Base-Dark/Images/Events/message_active.svg"
         }
       }
-    }
+    },
+    "timer": {},
+    "package": {}
   },
+  "intervals": {},
   "trigger": [],
   "actionTemplates": [],
   "languages": {
@@ -325,24 +350,37 @@
     }
   },
   "binding": {
-    "symbolError": "Ignore"
+    "symbolError": "Ignore",
+    "symbolWriteError": "ReadBack"
   },
   "packages": [
     {
       "name": "Beckhoff.TwinCAT.HMI.BaseTemplate",
-      "basePath": "/Beckhoff.TwinCAT.HMI.BaseTemplate"
+      "basePath": "/Beckhoff.TwinCAT.HMI.BaseTemplate",
+      "symbols": {
+        "package": {}
+      }
     },
     {
       "name": "Beckhoff.TwinCAT.HMI.Controls",
-      "basePath": "/Beckhoff.TwinCAT.HMI.Controls"
+      "basePath": "/Beckhoff.TwinCAT.HMI.Controls",
+      "symbols": {
+        "package": {}
+      }
     },
     {
       "name": "Beckhoff.TwinCAT.HMI.Framework",
-      "basePath": "/framework"
+      "basePath": "/Beckhoff.TwinCAT.HMI.Framework",
+      "symbols": {
+        "package": {}
+      }
     },
     {
       "name": "Beckhoff.TwinCAT.HMI.Functions",
-      "basePath": "/Beckhoff.TwinCAT.HMI.Functions"
+      "basePath": "/Beckhoff.TwinCAT.HMI.Functions",
+      "symbols": {
+        "package": {}
+      }
     }
   ],
   "keyboardLayouts": [
@@ -352,5 +390,24 @@
     {
       "url": "KeyboardLayouts/US - compact.keyboard.json"
     }
-  ]
+  ],
+  "systemKeyboard": {
+    "providerName": "",
+    "autoOpen": false,
+    "projectKeyboardMapping": {
+      "de": {
+        "text": "",
+        "decimal": "",
+        "numeric": ""
+      },
+      "en": {
+        "text": "",
+        "decimal": "",
+        "numeric": ""
+      }
+    }
+  },
+  "systemPopups": {
+    "providerName": "Beckhoff.TcHmiPopups"
+  }
 }

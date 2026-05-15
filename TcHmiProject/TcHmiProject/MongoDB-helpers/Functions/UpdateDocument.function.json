@@ -1,4 +1,4 @@
-﻿{
+{
     "function": {
         "name": "UpdateDocument",
         "namespace": "TcHmi.Functions.TcHmiProject",

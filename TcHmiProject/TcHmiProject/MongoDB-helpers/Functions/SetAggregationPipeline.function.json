@@ -1,4 +1,4 @@
-﻿{
+{
     "function": {
         "name": "SetAggregationPipeline",
         "namespace": "TcHmi.Functions.TcHmiProject",

@@ -1,4 +1,4 @@
-﻿{
+{
   "function": {
     "name": "ClearSqliteLogger",
     "namespace": "TcHmi.Functions.TcHmiProject",

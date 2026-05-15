@@ -1,4 +1,4 @@
-﻿{
+{
     "function": {
         "name": "CallServerFunctionPromise",
         "namespace": "TcHmi.Functions.TcHmiProject",

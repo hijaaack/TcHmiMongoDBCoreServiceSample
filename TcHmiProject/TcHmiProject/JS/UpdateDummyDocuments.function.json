@@ -1,0 +1,105 @@
+{
+  "function": {
+    "name": "UpdateDummyDocuments",
+    "namespace": "TcHmi.Functions.TcHmiProject",
+    "displayName": "UpdateDummyDocuments",
+    "description": "",
+    "waitMode": "Synchronous",
+    "category": "",
+    "returnValue": {
+      "type": "tchmi:general#/definitions/String"
+    },
+    "visible": true,
+    "injectContextObject": false,
+    "arguments": [
+      {
+        "name": "id1",
+        "displayName": "id1",
+        "type": "tchmi:general#/definitions/String",
+        "description": "",
+        "defaultValue": null,
+        "required": false,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false,
+        "allowControlAttributeBindingOptions": false
+      },
+      {
+        "name": "id2",
+        "displayName": "id2",
+        "type": "tchmi:general#/definitions/String",
+        "description": "",
+        "defaultValue": null,
+        "required": false,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false,
+        "allowControlAttributeBindingOptions": false
+      },
+      {
+        "name": "comment1",
+        "displayName": "comment1",
+        "type": "tchmi:general#/definitions/String",
+        "description": "",
+        "defaultValue": null,
+        "required": false,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false,
+        "allowControlAttributeBindingOptions": false
+      },
+      {
+        "name": "comment2",
+        "displayName": "comment2",
+        "type": "tchmi:general#/definitions/String",
+        "description": "",
+        "defaultValue": null,
+        "required": false,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false,
+        "allowControlAttributeBindingOptions": false
+      },
+      {
+        "name": "number1",
+        "displayName": "number1",
+        "type": "tchmi:general#/definitions/String",
+        "description": "",
+        "defaultValue": null,
+        "required": false,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false,
+        "allowControlAttributeBindingOptions": false
+      },
+      {
+        "name": "number2",
+        "displayName": "number2",
+        "type": "tchmi:general#/definitions/String",
+        "description": "",
+        "defaultValue": null,
+        "required": false,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false,
+        "allowControlAttributeBindingOptions": false
+      }
+    ]
+  },
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.4.5/runtimes/native1.12-tchmi/Schema/FunctionDescription.Schema.json",
+  "apiVersion": 1,
+  "version": {
+    "full": "0.0.0.0",
+    "major": 0,
+    "minor": 0,
+    "revision": 0,
+    "build": 0
+  },
+  "dependencyFiles": [
+    {
+      "name": "UpdateDummyDocuments.js",
+      "type": "JavaScript",
+      "description": ""
+    }
+  ]
+}

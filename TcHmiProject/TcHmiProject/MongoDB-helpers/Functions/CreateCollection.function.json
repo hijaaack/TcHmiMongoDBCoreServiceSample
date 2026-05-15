@@ -1,4 +1,4 @@
-﻿{
+{
     "function": {
         "name": "CreateCollection",
         "namespace": "TcHmi.Functions.TcHmiProject",

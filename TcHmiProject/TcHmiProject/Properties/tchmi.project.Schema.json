@@ -1,4 +1,4 @@
-﻿{
+{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "definitions": {
     "Symbol_Of_Array": {
@@ -12,6 +12,20 @@
           }
         }
       ]
+    },
+    "DummyData": {
+      "properties": {
+        "_id": {
+          "$ref": "tchmi:general#/definitions/String"
+        },
+        "comment": {
+          "$ref": "tchmi:general#/definitions/String"
+        },
+        "randomNumber": {
+          "$ref": "tchmi:general#/definitions/Number"
+        }
+      },
+      "type": "object"
     }
   }
 }

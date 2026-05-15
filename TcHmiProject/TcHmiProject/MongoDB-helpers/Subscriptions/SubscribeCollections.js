@@ -1,4 +1,4 @@
-﻿// Keep these lines for a best effort IntelliSense of Visual Studio 2017 and higher.
+// Keep these lines for a best effort IntelliSense of Visual Studio 2017 and higher.
 /// <reference path="./../../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.758.8/runtimes/native1.12-tchmi/TcHmi.d.ts" />
 
 (function (/** @type {globalThis.TcHmi} */ TcHmi) {
@@ -22,14 +22,15 @@
             symbol: expressionName
         }];
 
-        // Send the subscription command to the server
+        // Send the subscription command to the server 
         TcHmi.Server.subscribeEx(command, TcHmi.Config.get().tcHmiServer.websocketIntervalTime, null, function (callback) {
             
             let data = callback.response.commands[0].readValue;
             let json = JSON.parse(data);
-
+            console.log(json);
             var carObject = json.find(o => o['carData']);
             TcHmi.Symbol.writeEx("%i%carDataList%/i%", carObject.carData);
+            console.log(carObject);
 
             var dummyObject = json.find(o => o['newCollection']);
             TcHmi.Symbol.writeEx("%i%newCollectionList%/i%", dummyObject.newCollection);

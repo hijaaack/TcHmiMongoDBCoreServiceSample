@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Clean;Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.4.6.4\build\Microsoft.TypeScript.MSBuild.props" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.4.6.4\build\Microsoft.TypeScript.MSBuild.props')" />
+  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.5.9.2\build\Microsoft.TypeScript.MSBuild.props" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.5.9.2\build\Microsoft.TypeScript.MSBuild.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <TcHmiDirectory>$(registry:HKEY_CURRENT_USER\Software\Beckhoff\TwinCAT3\3.1@InstallDir)\..\Functions\TE2000-HMI-Engineering</TcHmiDirectory>
@@ -12,21 +12,21 @@
     <HmiTitle>Please enter your Title...</HmiTitle>
     <HmiVerboseLevel>2</HmiVerboseLevel>
     <HmiVersion>1.0.0.0</HmiVersion>
-    <HmiCommunicationServerPort>3000</HmiCommunicationServerPort>
+    <HmiCommunicationServerPort>3003</HmiCommunicationServerPort>
     <HmiLogTcHmiServerMessages>false</HmiLogTcHmiServerMessages>
     <HmiLogDesignerModeComMessages>false</HmiLogDesignerModeComMessages>
-    <HmiServerVersion>Latest</HmiServerVersion>
-    <HmiUseX64>True</HmiUseX64>
     <HmiDefaultLanguage>client</HmiDefaultLanguage>
     <TargetFrameworkMoniker>native,Version=v1.12.0,Profile=tchmi</TargetFrameworkMoniker>
     <TargetFramework>native1.12-tchmi</TargetFramework>
     <AzureFunctionsVersion>v2</AzureFunctionsVersion>
     <Name>TcHmiProject</Name>
     <HmiCommunicationRouterPort>10100</HmiCommunicationRouterPort>
-    <HmiCommunicationServerAuthPort>13000</HmiCommunicationServerAuthPort>
+    <HmiCommunicationServerAuthPort>13002</HmiCommunicationServerAuthPort>
     <HmiInitial>1.12.758.8</HmiInitial>
-    <HmiRecent>1.12.758.8</HmiRecent>
+    <HmiRecent>14.3.804.1</HmiRecent>
     <HmiServerNodeAdvancedView>False</HmiServerNodeAdvancedView>
+    <TcHmi_Beckhoff_TwinCAT_HMI_Server_Engineering_IncludeInArchive>false</TcHmi_Beckhoff_TwinCAT_HMI_Server_Engineering_IncludeInArchive>
+    <HmiCommunicationServerPublicPort>3443</HmiCommunicationServerPublicPort>
   </PropertyGroup>
   <PropertyGroup>
     <TwinCATHmi_Tasks>$(TcHmiDirectory)\MSBuild\Beckhoff.TwinCAT.HMI.tasks</TwinCATHmi_Tasks>
@@ -93,6 +93,18 @@
     <TcHmi_ServerAddress Condition="'$(TcHmi_ServerAddress)' == ''">127.0.0.1</TcHmi_ServerAddress>
     <TcHmi_ServerPort Condition="'$(TcHmi_ServerPort)' == ''">1010</TcHmi_ServerPort>
   </PropertyGroup>
+  <PropertyGroup>
+    <_TcHmiNodeJsMode>Global</_TcHmiNodeJsMode>
+    <_TcHmiNodeJsMode Condition="'$(_TcHmiNodeJsMode)' == ''">Global</_TcHmiNodeJsMode>
+    <_TcHmiNodePath Condition="'$(_TcHmiNodeJsMode)' == 'Global'">$(registry:HKEY_LOCAL_MACHINE\SOFTWARE\Node.js@InstallPath)</_TcHmiNodePath>
+    <_TcHmiNodePath Condition="'$(_TcHmiNodeJsMode)' == 'Global' AND '$(_TcHmiNodePath)' == '' AND Exists('C:\Program Files\nodejs\')">C:\Program Files\nodejs\</_TcHmiNodePath>
+    <_TcHmiNodePath Condition="'$(_TcHmiNodeJsMode)' == 'Global' AND '$(_TcHmiNodePath)' == '' AND Exists('C:\Program Files (x86)\nodejs\')">C:\Program Files (x86)\nodejs\</_TcHmiNodePath>
+  </PropertyGroup>
+  <Target Name="ReTargetNodePath" Condition="'$(_TcHmiNodePath)' != ''" BeforeTargets="$(CompileDependsOn)">
+    <PropertyGroup>
+      <NodePath>$(_TcHmiNodePath)</NodePath>
+    </PropertyGroup>
+  </Target>
   <Target Name="CoreBuild">
     <TcHmiMSBuild.Publish.TcHmiBuild TaskAction="Clean" ProjectDirectory="$(TcHmi_ProjectDirectory)" OutputPath="$(OutputPath)" />
     <TcHmiMSBuild.Publish.TcHmiBuild TaskAction="Build" ProjectDirectory="$(TcHmi_ProjectDirectory)" OutputPath="$(OutputPath)" ProjectFiles="@(Content)" VirtualMappings="$(TcHmi_VirtualMappings)" />
@@ -113,14 +125,16 @@
     <Folder Include="Imports" />
     <Folder Include="Imports\Images" />
     <Folder Include="Imports\Videos" />
+    <Folder Include="MongoDB-helpers" />
     <Folder Include="MongoDB-helpers\Functions" />
     <Folder Include="MongoDB-helpers\Aggregation" />
+    <Folder Include="MongoDB-helpers\Server" />
     <Folder Include="MongoDB-helpers\Server" />
     <Folder Include="MongoDB-helpers\Subscriptions" />
     <Folder Include="KeyboardLayouts\" />
     <Folder Include="Localization" />
-    <Folder Include="MongoDB-helpers" />
     <Folder Include="JS" />
+    <Folder Include="MongoDB-carData-output" />
     <Folder Include="Pages\" />
     <Folder Include="Server\ADS\" />
     <Folder Include="Server\MongoDBCoreService" />
@@ -142,6 +156,12 @@
     <Content Include=".eslintrc.json">
       <Visible>false</Visible>
     </Content>
+    <Content Include="Images\database-active.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\database-normal.svg">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="JS\AddNewDocument.function.json">
       <SubType>Content</SubType>
       <DependentUpon>JS\AddNewDocument.js</DependentUpon>
@@ -150,6 +170,13 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="JS\CarModelYearFilter.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="JS\ClearSqliteLogger.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>JS\ClearSqliteLogger.js</DependentUpon>
+    </Content>
+    <Content Include="JS\ClearSqliteLogger.js">
       <SubType>Content</SubType>
     </Content>
     <Content Include="JS\RemoveSelectedDocument.function.json">
@@ -164,6 +191,19 @@
       <DependentUpon>JS\UpdateDummyDocument.js</DependentUpon>
     </Content>
     <Content Include="JS\UpdateDummyDocument.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="JS\UpdateDummyDocuments.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>JS\UpdateDummyDocuments.js</DependentUpon>
+    </Content>
+    <Content Include="JS\UpdateDummyDocuments.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="MongoDB-carData-output\carDataOutput.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="MongoDB-carData-output\ReadMe.txt">
       <SubType>Content</SubType>
     </Content>
     <Content Include="MongoDB-helpers\Aggregation\CarBrandAggregationData.function.json">
@@ -215,6 +255,13 @@
     <Content Include="MongoDB-helpers\Functions\UpdateDocument.js">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="MongoDB-helpers\Functions\UpdateDocuments.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>MongoDB-helpers\Functions\UpdateDocuments.js</DependentUpon>
+    </Content>
+    <Content Include="MongoDB-helpers\Functions\UpdateDocuments.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="MongoDB-helpers\Server\CallServerFunction.function.json">
       <SubType>Content</SubType>
       <DependentUpon>MongoDB-helpers\Server\CallServerFunction.js</DependentUpon>
@@ -243,6 +290,10 @@
     <Content Include="MongoDB-helpers\Server\HandleErrorCodes.js">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="MongoDB-helpers\Server\CallServerFunction.js" />
+    <Content Include="MongoDB-helpers\Server\CallServerFunctionPromise.js" />
+    <Content Include="MongoDB-helpers\Server\CallServerFunctionPromiseJson.js" />
+    <Content Include="MongoDB-helpers\Server\HandleErrorCodes.js" />
     <Content Include="MongoDB-helpers\Subscriptions\SubscribeCollections.js">
       <SubType>Content</SubType>
     </Content>
@@ -253,9 +304,6 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Pages\Events.content">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Pages\StartPage.content">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Server\ADS\ADS.Config.default.json">
@@ -426,23 +474,13 @@
       <SubType>Content</SubType>
       <Visible>true</Visible>
     </Content>
-    <Content Include="Properties\tchmi.framework.Schema.tpl.json">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-    </Content>
     <Content Include="Properties\tchmi.framework.Schema.json">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-      <DependentUpon>Properties\tchmi.framework.Schema.tpl.json</DependentUpon>
-    </Content>
-    <Content Include="Properties\tchmi.project.Schema.tpl.json">
       <SubType>Content</SubType>
       <Visible>true</Visible>
     </Content>
     <Content Include="Properties\tchmi.project.Schema.json">
       <SubType>Content</SubType>
       <Visible>true</Visible>
-      <DependentUpon>Properties\tchmi.project.Schema.tpl.json</DependentUpon>
     </Content>
     <Content Include="Properties\tchmipublish.config.json">
       <SubType>Content</SubType>
@@ -472,23 +510,13 @@
       <SubType>Content</SubType>
       <Visible>true</Visible>
     </Content>
-    <Content Include="Localization\de.tpl.localization">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-    </Content>
-    <Content Include="Localization\en.tpl.localization">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-    </Content>
     <Content Include="Localization\de.localization">
       <SubType>Content</SubType>
       <Visible>true</Visible>
-      <DependentUpon>Localization\de.tpl.localization</DependentUpon>
     </Content>
     <Content Include="Localization\en.localization">
       <SubType>Content</SubType>
       <Visible>true</Visible>
-      <DependentUpon>Localization\en.tpl.localization</DependentUpon>
     </Content>
     <Content Include="KeyboardLayouts\German - compact.keyboard.json">
       <SubType>Content</SubType>
@@ -586,8 +614,8 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.TypeScript.MSBuild.4.6.4\build\Microsoft.TypeScript.MSBuild.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.TypeScript.MSBuild.4.6.4\build\Microsoft.TypeScript.MSBuild.props'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.TypeScript.MSBuild.4.6.4\build\Microsoft.TypeScript.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.TypeScript.MSBuild.4.6.4\build\Microsoft.TypeScript.MSBuild.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.TypeScript.MSBuild.5.9.2\build\Microsoft.TypeScript.MSBuild.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.TypeScript.MSBuild.5.9.2\build\Microsoft.TypeScript.MSBuild.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.TypeScript.MSBuild.5.9.2\build\Microsoft.TypeScript.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.TypeScript.MSBuild.5.9.2\build\Microsoft.TypeScript.MSBuild.targets'))" />
   </Target>
-  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.4.6.4\build\Microsoft.TypeScript.MSBuild.targets" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.4.6.4\build\Microsoft.TypeScript.MSBuild.targets')" />
+  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.5.9.2\build\Microsoft.TypeScript.MSBuild.targets" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.5.9.2\build\Microsoft.TypeScript.MSBuild.targets')" />
 </Project>

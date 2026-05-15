@@ -1,4 +1,4 @@
-﻿<div id="Data" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="1920" data-tchmi-height="920" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
+<div id="Data" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="1920" data-tchmi-height="920" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
 
 <div id="TcHmiDatagrid" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiDatagrid" data-tchmi-height="649" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="261" data-tchmi-top-unit="px" data-tchmi-width="465" data-tchmi-width-unit="px" data-tchmi-src-data="%i%carDataList%/i%" data-tchmi-filter="%i%carDatagridFilter%/i%">
 <script data-tchmi-target-attribute="data-tchmi-src-column" type="application/json">
@@ -215,10 +215,9 @@
 </div>
 <div id="TcHmiButton" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="512" data-tchmi-left-unit="px" data-tchmi-text="Set Pipeline Sample1" data-tchmi-top="127" data-tchmi-top-unit="px" data-tchmi-width="137" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1">
 
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
-[
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">[
   {
-    "event": "TcHmiButton.onPressed",
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onPressed",
     "actions": [
       {
         "objectType": "Function",
@@ -267,14 +266,12 @@
       }
     ]
   }
-]
-</script>
+]</script>
 </div>
 <div id="TcHmiButton_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="512" data-tchmi-left-unit="px" data-tchmi-text="Set Pipeline Sample2" data-tchmi-top="199" data-tchmi-top-unit="px" data-tchmi-width="137" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
-[
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">[
   {
-    "event": "TcHmiButton_1.onPressed",
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onPressed",
     "actions": [
       {
         "objectType": "Function",
@@ -323,8 +320,7 @@
       }
     ]
   }
-]
-</script>
+]</script>
 </div>
 <div id="TcHmiTextblock_2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="512" data-tchmi-left-unit="px" data-tchmi-text="Sample1: Return all cars with modelyear 1990-2000 by descending" data-tchmi-top="163" data-tchmi-top-unit="px" data-tchmi-width="465" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="14">
 </div>
@@ -434,7 +430,7 @@
 </div>
 <div id="TcHmiTextblock_6" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="57" data-tchmi-height-unit="px" data-tchmi-left="512" data-tchmi-left-unit="px" data-tchmi-text="The extension has 3 server symbols pre-defined, AggregationOutputList1-3. By setting a aggregation pipeline to the extension we can get specific data back from the extension in one of these server variables. " data-tchmi-top="55" data-tchmi-top-unit="px" data-tchmi-width="465" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="14">
 </div>
-<div id="TcHmiCombobox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiCombobox" data-tchmi-combobox-text="Select Car Brand" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="1015" data-tchmi-left-unit="px" data-tchmi-top="230" data-tchmi-top-unit="px" data-tchmi-width="264" data-tchmi-width-unit="px" data-tchmi-src-data="%i%carBrandList[0]::items%/i%" data-tchmi-text="%i%selectedCarBrand|BindingMode=TwoWay%/i%" data-tchmi-allow-text-input="true" data-tchmi-drop-down-vertical-alignment="Center" data-tchmi-drop-down-category-vertical-alignment="Center" data-tchmi-max-list-height="300">
+<div id="TcHmiCombobox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiCombobox" data-tchmi-combobox-text="Select Car Brand" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="1015" data-tchmi-left-unit="px" data-tchmi-top="230" data-tchmi-top-unit="px" data-tchmi-width="264" data-tchmi-width-unit="px" data-tchmi-text="%i%selectedCarBrand|BindingMode=TwoWay%/i%" data-tchmi-allow-text-input="true" data-tchmi-drop-down-vertical-alignment="Center" data-tchmi-drop-down-category-vertical-alignment="Center" data-tchmi-max-list-height="300">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -448,7 +444,7 @@
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
 [
   {
-    "event": "TcHmiCombobox.onSelectionChanged",
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onSelectionChanged",
     "actions": [
       {
         "objectType": "Function",
@@ -476,7 +472,7 @@
     ]
   },
   {
-    "event": "TcHmiCombobox.onAttached",
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onAttached",
     "actions": [
       {
         "objectType": "Function",
@@ -499,6 +495,22 @@
             "symbolExpression": "%i%carBrandList%/i%"
           }
         ],
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "%i%carBrandList%/i%",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctx%owner::SrcData%/ctx%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiCombobox.ListItemList",
+          "symbolExpression": "%i%carBrandList[0]::items%/i%"
+        },
         "asyncWait": true
       }
     ]

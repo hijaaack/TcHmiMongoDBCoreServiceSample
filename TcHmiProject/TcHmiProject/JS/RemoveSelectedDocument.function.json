@@ -1,4 +1,4 @@
-﻿{
+{
   "function": {
     "name": "RemoveSelectedDocument",
     "namespace": "TcHmi.Functions.TcHmiProject",
